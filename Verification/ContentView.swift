@@ -27,8 +27,9 @@ struct ContentView: View {
     var syntax: some View {
         VStack {
             NavigationStack {
-                NavigationLink("willSet/didSet", destination: WillSetDidSet())
-                NavigationLink("StructとFuncの違い", destination: StructFunc())
+                NavigationLink("willSet/didSet", destination: WillSetDidSetView())
+                NavigationLink("StructとFuncの違い", destination: StructFuncView())
+                NavigationLink("カスタムBinding", destination: CustomBindingView())
             }
         }
     }

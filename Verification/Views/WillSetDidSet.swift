@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct WillSetDidSet: View {
+struct WillSetDidSetView: View {
     @State var new: String = "newValue"
     @State var old: String = "oldValue"
     @State var value: Int = 0 {
@@ -27,5 +27,5 @@ struct WillSetDidSet: View {
 }
 
 #Preview {
-    WillSetDidSet()
+    WillSetDidSetView()
 }

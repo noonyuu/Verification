@@ -1,7 +1,7 @@
 import Foundation
 import SwiftUI
 
-struct StructFunc: View {
+struct StructFuncView: View {
     // インスタンス化
     let increment: StructFuncSample = StructFuncSample(value: "struct")
     @State private var value: String = ""
@@ -169,5 +169,5 @@ struct Restaurant {
 }
 
 #Preview {
-    StructFunc()
+    StructFuncView()
 }
