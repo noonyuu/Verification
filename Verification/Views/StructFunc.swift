@@ -6,7 +6,9 @@ struct StructFunc: View {
     let increment: StructFuncSample = StructFuncSample(value: "struct")
     @State private var value: String = ""
 
-    let staticCount: () = StaticCounter.count = 10
+    init() {
+        StaticCounter.count = 10
+    }
 
     var body: some View {
         Button {
@@ -29,11 +31,13 @@ struct StructFunc: View {
         Text("------static var------")
             .padding()
 
-        let person1: StructPerson = StructPerson(name: "Alice")
-        let person2: StructPerson = StructPerson(name: "Bob")
-        Text("Person 1: \(person1.name)")
-        Text("Person 2: \(person2.name)")
-            .padding()
+        Group {
+            let person1 = StructPerson(name: "Alice")
+            let person2 = StructPerson(name: "Bob")
+            Text("Person 1: \(person1.name)")
+            Text("Person 2: \(person2.name)")
+                .padding()
+        }
 
         // インスタンス化しなくてもアクセス可能 :8で値をsetしている(しなかったら初期値の0)
         Text("Static Count: \(StaticCounter.count)")
